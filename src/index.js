@@ -1,6 +1,9 @@
+#!/usr/bin/env node
+
 import clear from 'clear'
 import {cyan, red} from 'chalk'
 import commander from 'commander'
+import {version} from 'package.json'
 
 function log (msg) {
   if (commander.red) {
@@ -11,7 +14,7 @@ function log (msg) {
 }
 
 commander
-  .version('1.0.0')
+  .version(version)
   .option('-C, --clear', 'Clear the terminal')
   .option('-r, --red', 'Make text red')
   .parse(process.argv)

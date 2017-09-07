@@ -1,6 +1,6 @@
 {
   "name": "fridaycountdown",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A command-line tool for displaying the time until the next Friday",
   "main": "dist/index.js",
   "scripts": {
@@ -14,6 +14,10 @@
     "cli"
   ],
   "author": "Mark Hernandez <markedcode@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MarkH817/fridaycountdown.git"
+  },
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.1.0",
