@@ -1,0 +1,27 @@
+{
+  "name": "fridaycountdown",
+  "version": "1.0.0",
+  "description": "A command-line tool for displaying the time until the next Friday",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build",
+    "test": "node dist"
+  },
+  "keywords": [
+    "friday",
+    "countdown",
+    "cli"
+  ],
+  "author": "Mark Hernandez <markedcode@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "clear": "0.0.1",
+    "commander": "^2.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}
