@@ -1,31 +1,34 @@
 #!/usr/bin/env node
-
+// @ts-check
 import clear from 'clear'
-import {cyanBright as cyan, redBright as red} from 'chalk'
-import commander from 'commander'
-import info from '../package.json'
+import { program } from 'commander'
+import { cyanBright as cyan, redBright as red } from 'yoctocolors'
+import info from '../package.json' with { type: 'json' }
 
+/**
+ * @param {string} msg
+ */
 function log (msg) {
-  if (commander.red) {
+  if (program.getOptionValue('red')) {
     console.log(red(msg))
   } else {
     console.log(cyan(msg))
   }
 }
 
-commander
+program
   .version(info.version)
   .option('-c, --clear', 'Clear the terminal')
   .option('-r, --red', 'Make text red')
   .parse(process.argv)
 
-if (commander.clear) {
+if (program.getOptionValue('clear')) {
   clear()
 }
 
 let today = new Date()
-let friday = new Date(today)
-let daysBeforeFriday = (5 + 7 - today.getDay()) % 7
+let daysBeforeFriday = (5 - today.getDay()) % 7
+let friday = new Date()
 friday.setDate(today.getDate() + daysBeforeFriday)
 
 log(`~~Countdown to Friday~~`)

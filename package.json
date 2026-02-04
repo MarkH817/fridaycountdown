@@ -2,33 +2,38 @@
   "name": "fridaycountdown",
   "version": "1.0.6",
   "description": "A command-line tool for displaying the time until the next Friday",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "babel src --out-dir dist",
-    "prepublish": "npm run build",
-    "test": "node dist"
-  },
   "keywords": [
     "friday",
     "countdown",
     "cli"
   ],
-  "author": "Mark Hernandez <markedcode@gmail.com>",
+  "bin": {
+    "fridaycountdown": "./src/index.mjs"
+  },
+  "scripts": {
+    "test": "node ./src/index.mjs"
+  },
+  "main": "./src/index.mjs",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "author": {
+    "name": "Mark Hernandez",
+    "email": "mark@lion-byte.com",
+    "url": "https://www.lion-byte.com"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:MarkH817/fridaycountdown.git"
   },
-  "license": "MIT",
-  "bin": {
-    "fridaycountdown": "./dist/index.js"
-  },
   "dependencies": {
-    "chalk": "^2.1.0",
-    "clear": "0.0.1",
-    "commander": "^2.11.0"
+    "clear": "^0.1.0",
+    "commander": "^14.0.3",
+    "yoctocolors": "^2.1.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
+    "@types/node": "^25.2.0"
   }
 }
