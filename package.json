@@ -30,8 +30,7 @@
   },
   "dependencies": {
     "clear": "^0.1.0",
-    "commander": "^14.0.3",
-    "yoctocolors": "^2.1.2"
+    "commander": "^14.0.3"
   },
   "devDependencies": {
     "@types/node": "^25.2.0"

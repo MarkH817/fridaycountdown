@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 // @ts-check
+import { styleText } from 'node:util'
 import clear from 'clear'
 import { program } from 'commander'
-import { cyanBright as cyan, redBright as red } from 'yoctocolors'
 import info from '../package.json' with { type: 'json' }
 
 /**
  * @param {string} msg
  */
-function log (msg) {
+function log(msg) {
   if (program.getOptionValue('red')) {
-    console.log(red(msg))
+    console.log(styleText('red', msg))
   } else {
-    console.log(cyan(msg))
+    console.log(styleText('cyan', msg))
   }
 }
 
@@ -35,10 +35,12 @@ log(`~~Countdown to Friday~~`)
 log(`Today is ${today.toLocaleDateString('en-US')}`)
 
 if (daysBeforeFriday === 0) {
-  log(`Today is Friday!`)
+  log(`It's Friday!`)
   log(`Woo!`)
 } else if (daysBeforeFriday === 1) {
   log(`Tomorrow is Friday ${friday.toLocaleDateString('en-US')}!`)
 } else {
-  log(`${daysBeforeFriday} days until Friday ${friday.toLocaleDateString('en-US')}!`)
+  log(
+    `${daysBeforeFriday} days until Friday ${friday.toLocaleDateString('en-US')}!`,
+  )
 }
