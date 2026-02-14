@@ -11,9 +11,16 @@
     "fridaycountdown": "./src/index.mjs"
   },
   "scripts": {
+    "start": "node ./src/index.mjs",
     "test": "node ./src/index.mjs"
   },
   "main": "./src/index.mjs",
+  "imports": {
+    "#utils": "./src/utils/index.mjs",
+    "#utils/*": "./src/utils/*",
+    "#package.json": "./package.json"
+  },
+  "exports": null,
   "type": "module",
   "license": "MIT",
   "engines": {

@@ -10,11 +10,7 @@ const options = {
 /** @param {readonly string[]} args */
 export function parse(args) {
   try {
-    const { values } = parseArgs({
-      args,
-      options,
-    })
-    return values
+    return parseArgs({ args, options }).values
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message)
