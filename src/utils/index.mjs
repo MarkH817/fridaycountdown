@@ -1,1 +1,1 @@
-export * from './date.util.mjs'
+export * from './date.mjs'

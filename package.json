@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "node ./src/index.mjs",
-    "test": "node ./src/index.mjs"
+    "test": "node --test"
   },
   "main": "./src/index.mjs",
   "imports": {

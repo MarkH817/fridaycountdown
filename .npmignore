@@ -1,3 +1,4 @@
-.prettierrc
 .editorconfig
+.prettierrc
 CHANGELOG.md
+*.test.mjs

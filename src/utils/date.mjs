@@ -21,7 +21,7 @@ export function daysUntilFriday(date) {
  * @param {number} days
  */
 export function addDays(date, days) {
-  const resultDate = new Date()
+  const resultDate = new Date(date)
   resultDate.setDate(date.getDate() + days)
   return resultDate
 }
