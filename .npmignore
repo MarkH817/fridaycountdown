@@ -1,4 +1,5 @@
 .editorconfig
 .prettierrc
-CHANGELOG.md
+.vscode
 *.test.mjs
+CHANGELOG.md
