@@ -8,7 +8,7 @@ import {
   formatRelativeDays,
 } from '#utils'
 import { parse } from './args.mjs'
-import { styledLog } from './log.mjs'
+import { rainbowLog, styledLog } from './log.mjs'
 
 const args = parse(process.argv.slice(2))
 
@@ -25,7 +25,7 @@ log(`~~Countdown to Friday~~`)
 log(`Today is ${formatDate(today)}.`)
 
 if (daysBeforeFriday === 0) {
-  log("Yippee!")
+  rainbowLog('Yippee!')
 } else {
   const nextFriday = addDays(today, daysBeforeFriday)
   log(`${formatDate(nextFriday)} is ${formatRelativeDays(daysBeforeFriday)}!`)
