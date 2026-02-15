@@ -19,3 +19,11 @@
 - Remove external dependencies
 - Fix date math to be non-negative
 - Fix typo for `.npmignore`
+
+### 3.1.0
+
+- Add rainbow effect to message when it is Friday
+- Add GitHub action to publish on tag push
+- Add tests using Node's test runner
+- Add `"exports": null` to `package.json`
+- Add subpath imports to `package.json`

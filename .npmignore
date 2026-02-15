@@ -1,4 +1,5 @@
 .editorconfig
+.github
 .prettierrc
 .vscode
 *.test.mjs
